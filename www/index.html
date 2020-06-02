@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    // Page init event
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#first-page')) {
+
+        //犬のボタンを押した時のイベントを定義している
+        page.querySelector('#push-button-a').onclick = function() {
+          document.querySelector('#navigator').pushPage('page2.html');
+        };
+
+        //猫
+        page.querySelector('#push-button-b').onclick = function() {
+          document.querySelector('#navigator').pushPage('page3.html');
+        };
+      }
+      
+      else if (page.matches('#second-page')) 
+      {
+        //犬 小型
+        page.querySelector('#push-button-c').onclick = function() {
+          document.querySelector('#navigator').pushPage('page4.html');
+        };
+
+        //犬 中型
+        page.querySelector('#push-button-d').onclick = function() {
+          document.querySelector('#navigator').pushPage('page5.html');
+        };
+
+        //犬 大型
+        page.querySelector('#push-button-e').onclick = function() {
+          document.querySelector('#navigator').pushPage('page6.html');
+        };
+      }
+
+       else if (page.matches('#second-page2')) 
+      {
+       //猫 短
+        page.querySelector('#push-button-f').onclick = function() {
+          document.querySelector('#navigator').pushPage('page7.html');
+        };
+
+        //猫 長
+        page.querySelector('#push-button-g').onclick = function() {
+          document.querySelector('#navigator').pushPage('page8.html');
+        };
+      }
+      
+       else if (page.matches('#third-pageD1'))
+        {
+
+        //犬 小 かわいい
+        page.querySelector('#push-button-c-a').onclick = function() {
+          document.querySelector('#navigator').pushPage('page9.html');
+        };
+
+        //犬  小 かっこいい
+        page.querySelector('#push-button-c-b').onclick = function() {
+          document.querySelector('#navigator').pushPage('page10.html');
+        };
+      }
+
+      else if (page.matches('#third-pageD2'))
+       {
+        //犬 中 かわいい
+        page.querySelector('#push-button-d-a').onclick = function() {
+          document.querySelector('#navigator').pushPage('page11.html');
+        };
+
+        //犬 中 かっこいい
+        page.querySelector('#push-button-d-b').onclick = function() {
+          document.querySelector('#navigator').pushPage('page12.html');
+        };
+       }
+
+       else if (page.matches('#third-pageD3'))
+        {
+        //犬 大 かわいい
+        page.querySelector('#push-button-e-a').onclick = function() {
+          document.querySelector('#navigator').pushPage('page13.html');
+        };
+
+          //犬 大 かっこいい
+        page.querySelector('#push-button-e-b').onclick = function() {
+          document.querySelector('#navigator').pushPage('page14.html');
+        };
+      }
+
+    else if (page.matches('#third-pageC1'))
+        {
+      //猫 短 耳立ってる
+        page.querySelector('#push-button-f-a').onclick = function() {
+          document.querySelector('#navigator').pushPage('page15.html');
+        };
+
+      //猫 短 耳立ってない
+        page.querySelector('#push-button-f-b').onclick = function() {
+          document.querySelector('#navigator').pushPage('page16.html');
+        };
+       }
+
+      else if (page.matches('#third-pageC2'))
+      {
+        //猫 長 耳立ってる
+        page.querySelector('#push-button-g-a').onclick = function() {
+          document.querySelector('#navigator').pushPage('page17.html');
+        };
+
+        //猫 長 耳立ってない
+        page.querySelector('#push-button-g-b').onclick = function() {
+          document.querySelector('#navigator').pushPage('page18.html');
+        };
+    }
+  }
+ );
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+  </script>
+</head>
+<body>
+
+  //one-navigatorはページを変えるためのパーツ
+  <ons-navigator id="navigator"  page="page1.html"></ons-navigator> 
+
+  //page1.htmlの定義
+  <ons-template id="page1.html">
+    <ons-page id="first-page">
+      <ons-toolbar>
+        <div class="center">質問１</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>犬派？猫派？</p>
+        <ons-list-item modifier="longdivider" id="push-button-a">犬</ons-list-item>
+        <ons-list-item modifier="longdivider" id="push-button-b">猫</ons-list-item>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  //page2.htmlの定義
+  <ons-template id="page2.html">
+    <ons-page id="second-page">'
+      <ons-toolbar>
+        <div class="center">質問2</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>犬のサイズは？</p>
+        <ons-list-item modifier="longdivider" id="push-button-c">小型犬</ons-list-item>
+        <ons-list-item modifier="longdivider" id="push-button-d">中型犬</ons-list-item>
+        <ons-list-item modifier="longdivider" id="push-button-e">大型犬</ons-list-item>
+      </div>
+    </ons-page>
+  </ons-template>
+
+//page3.htmlの定義
+  <ons-template id="page3.html">
+    <ons-page id="second-page2">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 1</ons-back-button></div>
+        <div class="center">質問 2</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>猫の毛の長さは？</p>
+        <ons-list-item modifier="longdivider" id="push-button-f">短い</ons-list-item>
+        <ons-list-item modifier="longdivider" id="push-button-g">長い</ons-list-item>
+      </div>
+    </ons-page>
+  </ons-template>
+
+   //page4.htmlの定義
+  <ons-template id="page4.html">
+    <ons-page id="third-pageD1">
+      <ons-toolbar>
+        <div class="center">質問3</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>可愛い感じ？かっこいい感じ？</p>
+        <ons-list-item modifier="longdivider" id="push-button-c-a">可愛い</ons-list-item>
+        <ons-list-item modifier="longdivider" id="push-button-c-b">かっこいい</ons-list-item>
+      </div>
+    </ons-page>
+  </ons-template>
+
+
+   //page5.htmlの定義
+  <ons-template id="page5.html">
+    <ons-page id="third-pageD2">
+      <ons-toolbar>
+        <div class="center">質問3</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>可愛い感じ？かっこいい感じ？</p>
+        <ons-list-item modifier="longdivider" id="push-button-d-a">可愛い</ons-list-item>
+        <ons-list-item modifier="longdivider" id="push-button-d-b">かっこいい</ons-list-item>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  //page6.htmlの定義
+  <ons-template id="page6.html">
+    <ons-page id="third-pageD3">
+      <ons-toolbar>
+        <div class="center">質問3</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>可愛い感じ？かっこいい感じ？</p>
+        <ons-list-item modifier="longdivider" id="push-button-e-a">可愛い</ons-list-item>
+        <ons-list-item modifier="longdivider" id="push-button-e-b">かっこいい</ons-list-item>
+      </div>
+    </ons-page>
+  </ons-template>
+
+//page7.htmlの定義
+  <ons-template id="page7.html">
+    <ons-page id="third-pageC1">
+      <ons-toolbar>
+        <div class="center">質問 3</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>耳は？</p>
+        <ons-list-item modifier="longdivider" id="push-button-f-a">立ってるほうがいい</ons-list-item>
+        <ons-list-item modifier="longdivider" id="push-button-f-b">立ってないほうがいい</ons-list-item>
+      </div>
+    </ons-page>
+  </ons-template>
+
+//page8.htmlの定義
+  <ons-template id="page8.html">
+    <ons-page id="third-pageC2">
+      <ons-toolbar>
+        <div class="center">質問 3</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>耳は？</p>
+        <ons-list-item modifier="longdivider" id="push-button-g-a">立ってるほうがいい</ons-list-item>
+        <ons-list-item modifier="longdivider" id="push-button-g-b">立ってないほうがいい</ons-list-item>
+      </div>
+    </ons-page>
+  </ons-template>
+
+//page9.htmlの定義
+  <ons-template id="page9.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>ポメラニアンなんてどうでしょうか？</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  //page10.htmlの定義
+  <ons-template id="page10.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>ミニチュアピンシャーなんてどうでしょうか？</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+//page11.htmlの定義
+  <ons-template id="page11.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>柴犬なんてどうでしょうか？</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+//page12.htmlの定義
+  <ons-template id="page12.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>ジャーマンピンシャーなんてどうでしょうか？</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  //page13.htmlの定義
+  <ons-template id="page13.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>サモエドなんてどうでしょうか？</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+//page14.htmlの定義
+  <ons-template id="page14.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>バーニーズ・マウンテンなんてどうでしょうか？</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+//page15.htmlの定義
+  <ons-template id="page15.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>シンガプーラなんてどうでしょうか？</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  //page16.htmlの定義
+  <ons-template id="page16.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>エキゾチック・ショートヘアなんてどうでしょうか？</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+//page17.htmlの定義
+  <ons-template id="page17.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>ラガマフィンなんてどうでしょうか？</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+//page18.htmlの定義
+  <ons-template id="page18.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+        <p>スコティッシュ・フォールド・ロングヘアなんてどうでしょうか？</p>
+      </div>
+    </ons-page>
+  </ons-template>
+
+</body>
+</html>
